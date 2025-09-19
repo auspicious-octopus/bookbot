@@ -17,3 +17,13 @@ def count_characters(text):
                 tally += 1
         char_dict[char] = tally
     return char_dict
+
+def sort_on(items):
+    return items["num"]
+
+def sort(dict_in):
+    dict_list = []
+    for key in dict_in:
+        dict_list.append({"char": key, "num": dict_in[key]})
+    dict_list.sort(reverse=True, key=sort_on)
+    return dict_list
